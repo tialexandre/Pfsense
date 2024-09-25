@@ -1,0 +1,17 @@
+function FindProxyForURL(url, host){
+   var host_ip;
+
+   host_ip= dnsResolve(host);
+   if (isInNet(host_ip, "127.0.0.1", "255.255.255.255"))
+      return "DIRECT";
+  if (isInNet(host_ip, "10.4.1.0", "255.255.0.0"))
+      return "DIRECT";
+  if (isInNet(host_ip, "10.1.34.0", "255.255.0.0"))
+      return "DIRECT";
+   if (shExpMatch(url, "*.timr.*"))
+      return "DIRECT";
+   if (isInNet(myIpAddress(), "10.4.1.0", "255.255.255.0"))
+      return "PROXY 10.4.1.254:3128";
+   else
+      return "DIRECT";
+}
