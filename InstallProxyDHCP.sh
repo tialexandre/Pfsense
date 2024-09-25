@@ -15,5 +15,17 @@ chmod +x /usr/local/www/wpad.dat
 #instala dependencia para editar aqruivo
 echo y | pgk install nano 
 
-#abre arquivo Wpad para edição 
-nano /usr/local/www/wpad.dat
+# Pergunta qual é a rede LAN e armazena na variável LAN
+echo "Digite a rede LAN (Exemplo: 192.168.1.0): "
+read LAN
+
+# Pergunta qual é o Proxy e armazena na variável PROXY
+echo "Digite o endereço do Proxy (Exemplo: 192.168.1.1:3128): "
+read PROXY
+
+# Substitui o texto 10.4.1.0 pela variável LAN
+sed -i "" "s/10.4.1.0/$LAN/g" /usr/local/www/wpad.dat
+
+# Substitui o texto 10.4.1.254 pela variável PROXY
+sed -i "" "s/10.4.1.254/$PROXY/g" /usr/local/www/wpad.dat
+
