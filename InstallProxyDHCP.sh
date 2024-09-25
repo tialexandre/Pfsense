@@ -20,7 +20,7 @@ echo "Digite a rede LAN (Exemplo: 192.168.1.0): "
 read LAN
 
 # Pergunta qual é o Proxy e armazena na variável PROXY
-echo "Digite o endereço do Proxy (Exemplo: 192.168.1.1:3128): "
+echo "Digite o endereço do Proxy (Exemplo: 192.168.1.1): "
 read PROXY
 
 # Substitui o texto 10.4.1.0 pela variável LAN
