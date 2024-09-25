@@ -29,3 +29,5 @@ sed -i "" "s/10.4.1.0/$LAN/g" /usr/local/www/wpad.dat
 # Substitui o texto 10.4.1.254 pela variável PROXY
 sed -i "" "s/10.4.1.254/$PROXY/g" /usr/local/www/wpad.dat
 
+# Exibe uma mensagem de confirmação
+echo "Substituições realizadas com sucesso no arquivo /usr/local/www/wpad.dat"
