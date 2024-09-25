@@ -4,14 +4,14 @@ cd /var/etc/
 if [ -f /var/etc/nginx-wpad.conf ]; then
   echo "nginx-wpad.conf -> ok"
 else
- curl  http://datacenter.timr.com.br/pfsense/nginx-wpad.conf > /var/etc/nginx-wpad.conf 
+ curl  https://raw.githubusercontent.com/tialexandre/Pfsense/refs/heads/main/nginx-wpad.conf > /var/etc/nginx-wpad.conf 
 chmod +x /var/etc/nginx-wpad.conf
 fi
 
 if [ -f /var/etc/wpad-mime.types ]; then
   echo "wpad-mime.types -> ok"
 else
- curl  http://datacenter.timr.com.br/pfsense/wpad-mime.types > /var/etc/wpad-mime.types
+ curl  https://raw.githubusercontent.com/tialexandre/Pfsense/refs/heads/main/wpad-mime.types > /var/etc/wpad-mime.types
 chmod +x /var/etc/wpad-mime.types
 fi
 
