@@ -6,8 +6,6 @@ function FindProxyForURL(url, host){
       return "DIRECT";
   if (isInNet(host_ip, "10.4.1.0", "255.255.0.0"))
       return "DIRECT";
-  if (isInNet(host_ip, "10.1.34.0", "255.255.0.0"))
-      return "DIRECT";
    if (shExpMatch(url, "*.timr.*"))
       return "DIRECT";
    if (isInNet(myIpAddress(), "10.4.1.0", "255.255.255.0"))
